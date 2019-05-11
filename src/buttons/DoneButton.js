@@ -1,46 +1,39 @@
-import { Animated } from 'react-native';
+import { View } from 'react-native';
 import React from 'react';
 
 import { BUTTON_SIZE, MARGIN_RIGHT, getDefaultStyle } from './util';
+import TextButton from './TextButton';
 import SymbolButton from './SymbolButton';
 
 class DoneButton extends React.Component {
-  state = {
-    fadeAnim: new Animated.Value(0),
-  };
+  // state = {
+  //   fadeAnim: new Animated.Value(0),
+  // };
 
-  componentDidMount() {
-    setTimeout(() => {
-      Animated.timing(this.state.fadeAnim, {
-        toValue: 1,
-        duration: 1000,
-      }).start();
-    }, 1000);
-  }
+  // componentDidMount() {
+  //   setTimeout(() => {
+  //     Animated.timing(this.state.fadeAnim, {
+  //       toValue: 1,
+  //       duration: 1000,
+  //     }).start();
+  //   }, 1000);
+  // }
 
   render() {
-    const { isLight, ...rest } = this.props;
-    const { fadeAnim } = this.state;
+    const { isLight, doneLabel, ...rest } = this.props;
+    //const { fadeAnim } = this.state;
 
     return (
-      <Animated.View
-        style={{
-          opacity: fadeAnim,
-        }}
-      >
-        <SymbolButton
+      <View>
+        <TextButton
           size={BUTTON_SIZE}
-          textStyle={getDefaultStyle(isLight)}
-          style={{
-            borderRadius: BUTTON_SIZE / 2,
-            backgroundColor: 'rgba(255, 255, 255, 0.10)',
-            margin: MARGIN_RIGHT,
-          }}
+          style={{ marginRight: MARGIN_RIGHT }}
+          textStyle={[getDefaultStyle('isLight'), {color: '#5a7bef'}]}
           {...rest}
         >
-          ✓
-        </SymbolButton>
-      </Animated.View>
+          {doneLabel}
+        </TextButton>
+      </View>
     );
   }
 }

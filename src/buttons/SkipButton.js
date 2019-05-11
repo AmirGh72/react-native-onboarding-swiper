@@ -7,7 +7,7 @@ const SkipButton = ({ skipLabel, isLight, ...rest }) => (
   <TextButton
     size={BUTTON_SIZE}
     style={{ marginLeft: MARGIN_LEFT }}
-    textStyle={getDefaultStyle(isLight)}
+    textStyle={[getDefaultStyle(isLight),{color: '#6b6b6b'}]}
     {...rest}
   >
     {skipLabel}

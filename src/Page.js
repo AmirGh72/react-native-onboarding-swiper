@@ -2,6 +2,7 @@ import { Dimensions, Text, View, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+
 const Page = ({
   isLight,
   image,
@@ -38,10 +39,15 @@ const Page = ({
   }
 
   return (
-    <View style={[styles.container, containerStyles, { width, height }]}>
+    <View style={[styles.container, containerStyles, { width }]}>
       <View style={[styles.imageContainer, imageContainerStyles]}>{image}</View>
-      {titleElement}
-      {subtitleElement}
+      <View style={{
+        flex: 2,
+        backgroundColor: '#fff',
+        }}>
+        {titleElement}
+        {subtitleElement}
+      </View>
     </View>
   );
 };

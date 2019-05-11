@@ -7,7 +7,7 @@ const NextButton = ({ nextLabel, isLight, ...rest }) => (
   <TextButton
     size={BUTTON_SIZE}
     style={{ marginRight: MARGIN_RIGHT }}
-    textStyle={getDefaultStyle(isLight)}
+    textStyle={[getDefaultStyle(isLight), {color: '#6b6b6b',}]}
     {...rest}
   >
     {nextLabel}

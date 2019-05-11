@@ -52,14 +52,14 @@ class Onboarding extends Component {
       return {
         previousPage: state.currentPage,
         currentPage: viewableItems[0].index,
-        backgroundColorAnim: new Animated.Value(0),
+        //backgroundColorAnim: new Animated.Value(0),
       };
     });
   };
 
   goNext = () => {
     this.flatList.scrollToIndex({
-      animated: true,
+      //animated: true,
       index: this.state.currentPage + 1,
     });
   };
@@ -122,6 +122,7 @@ class Onboarding extends Component {
       onDone,
       skipLabel,
       nextLabel,
+      doneLabel,
       allowFontScalingButtons,
       SkipButtonComponent,
       DoneButtonComponent,
@@ -162,7 +163,7 @@ class Onboarding extends Component {
       skipToPage != null
         ? () => {
             this.flatList.scrollToIndex({
-              animated: true,
+              //animated: true,
               index: skipToPage,
             });
           }
@@ -209,6 +210,7 @@ class Onboarding extends Component {
               onNext={this.goNext}
               skipLabel={skipLabel}
               nextLabel={nextLabel}
+              doneLabel={doneLabel}
               allowFontScaling={allowFontScalingButtons}
               SkipButtonComponent={SkipButtonComponent}
               DoneButtonComponent={DoneButtonComponent}
@@ -286,7 +288,7 @@ Onboarding.defaultProps = {
   allowFontScalingButtons: true,
   titleStyles: null,
   subTitleStyles: null,
-  transitionAnimationDuration: 500,
+  transitionAnimationDuration: 100,
   skipToPage: null,
   pageIndexCallback: null,
 };

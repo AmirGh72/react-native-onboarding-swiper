@@ -19,6 +19,7 @@ const Pagination = ({
   onDone,
   skipLabel,
   nextLabel,
+  doneLabel,
   allowFontScaling,
   SkipButtonComponent,
   NextButtonComponent,
@@ -57,6 +58,7 @@ const Pagination = ({
   const DoneButtonFinal = showDone &&
     isLastPage && (
       <DoneButtonComponent
+        doneLabel={doneLabel}
         isLight={isLight}
 		allowFontScaling={allowFontScaling}
         onPress={() => {
@@ -80,7 +82,7 @@ const Pagination = ({
     >
       <View style={styles.buttonLeft}>{SkipButtonFinal}</View>
       <Dots
-        isLight={isLight}
+        isLight={true}
         numPages={numPages}
         currentPage={currentPage}
         Dot={DotComponent}

@@ -9,7 +9,7 @@ const TextButton = ({ size, onPress, textStyle, allowFontScaling, style, childre
       onPress={onPress}
       hitSlop={{ top: 15, bottom: 15, left: 15, right: 15 }}
     >
-      <Text allowFontScaling={allowFontScaling} style={{ fontSize: size / 2.5, ...textStyle }}>{children}</Text>
+      <Text allowFontScaling={allowFontScaling} style={textStyle}>{children}</Text>
     </TouchableOpacity>
   </View>
 );
