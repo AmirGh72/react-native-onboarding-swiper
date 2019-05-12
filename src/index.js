@@ -77,6 +77,7 @@ class Onboarding extends Component {
     const {
       containerStyles,
       imageContainerStyles,
+      contentContainerStyles,
       allowFontScalingText,
       titleStyles,
       subTitleStyles,
@@ -92,6 +93,7 @@ class Onboarding extends Component {
         height={this.state.height || Dimensions.get('window').height}
         containerStyles={containerStyles}
         imageContainerStyles={imageContainerStyles}
+        contentContainerStyles={contentContainerStyles}
         allowFontScaling={allowFontScalingText}
         titleStyles={Object.assign(
           {},
@@ -123,6 +125,9 @@ class Onboarding extends Component {
       skipLabel,
       nextLabel,
       doneLabel,
+      nextStyle,
+      skipStyle,
+      doneStyle,
       allowFontScalingButtons,
       SkipButtonComponent,
       DoneButtonComponent,
@@ -211,6 +216,9 @@ class Onboarding extends Component {
               skipLabel={skipLabel}
               nextLabel={nextLabel}
               doneLabel={doneLabel}
+              nextStyle={nextStyle}
+              skipStyle={skipStyle}
+              doneStyle={doneStyle}
               allowFontScaling={allowFontScalingButtons}
               SkipButtonComponent={SkipButtonComponent}
               DoneButtonComponent={DoneButtonComponent}
@@ -250,6 +258,9 @@ Onboarding.propTypes = {
   onDone: PropTypes.func,
   skipLabel: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   nextLabel: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  nextStyle: Text.propTypes.style,
+  skipStyle: Text.propTypes.style,
+  doneStyle: Text.propTypes.style,
   SkipButtonComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
   DoneButtonComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
   NextButtonComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
@@ -282,8 +293,12 @@ Onboarding.defaultProps = {
   DoneButtonComponent: DoneButton,
   NextButtonComponent: NextButton,
   DotComponent: Dot,
+  nextStyle: null,
+  skipStyle: null,
+  doneStyle: null,
   containerStyles: null,
   imageContainerStyles: null,
+  contentContainerStyles: null,
   allowFontScalingText: true,
   allowFontScalingButtons: true,
   titleStyles: null,

@@ -1,4 +1,4 @@
-import { View, StatusBar } from 'react-native';
+import { View, StatusBar, Text } from 'react-native';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -20,6 +20,9 @@ const Pagination = ({
   skipLabel,
   nextLabel,
   doneLabel,
+  nextStyle,
+  skipStyle,
+  doneStyle,
   allowFontScaling,
   SkipButtonComponent,
   NextButtonComponent,
@@ -33,7 +36,8 @@ const Pagination = ({
       <SkipButtonComponent
         isLight={isLight}
         skipLabel={skipLabel}
-		allowFontScaling={allowFontScaling}
+        skipStyle={skipStyle}
+		    allowFontScaling={allowFontScaling}
         onPress={() => {
           if (typeof onSkip === 'function') {
             if (controlStatusBar) {
@@ -49,6 +53,7 @@ const Pagination = ({
     !isLastPage && (
       <NextButtonComponent
         nextLabel={nextLabel}
+        nextStyle={nextStyle}
 		allowFontScaling={allowFontScaling}
         isLight={isLight}
         onPress={onNext}
@@ -59,6 +64,7 @@ const Pagination = ({
     isLastPage && (
       <DoneButtonComponent
         doneLabel={doneLabel}
+        doneStyle={doneStyle}
         isLight={isLight}
 		allowFontScaling={allowFontScaling}
         onPress={() => {
@@ -109,6 +115,9 @@ Pagination.propTypes = {
   onSkip: PropTypes.func,
   onDone: PropTypes.func,
   allowFontScaling: PropTypes.bool,
+  nextStyle: Text.propTypes.style,
+  skipStyle: Text.propTypes.style,
+  doneStyle: Text.propTypes.style,
   skipLabel: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
     .isRequired,
   nextLabel: PropTypes.oneOfType([PropTypes.element, PropTypes.string])

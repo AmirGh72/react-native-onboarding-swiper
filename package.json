@@ -1,27 +1,25 @@
 {
-  "_from": "react-native-onboarding-swiper",
+  "_from": "github:AmirGh72/react-native-onboarding-swiper",
   "_id": "react-native-onboarding-swiper@1.1.0",
   "_inBundle": false,
-  "_integrity": "sha512-hU3DkRlo5pR4A8mAdvwWULZrnZx6rfNiQsdwP7cLHZNGRIYBBX09CxVgI9NYDf0iiEWDGfZQzqNeUk1uSbpSEg==",
+  "_integrity": "",
   "_location": "/react-native-onboarding-swiper",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "react-native-onboarding-swiper",
-    "name": "react-native-onboarding-swiper",
-    "escapedName": "react-native-onboarding-swiper",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+    "type": "git",
+    "raw": "AmirGh72/react-native-onboarding-swiper",
+    "rawSpec": "AmirGh72/react-native-onboarding-swiper",
+    "saveSpec": "github:AmirGh72/react-native-onboarding-swiper",
+    "fetchSpec": null,
+    "gitCommittish": null
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/react-native-onboarding-swiper/-/react-native-onboarding-swiper-1.1.0.tgz",
+  "_resolved": "github:AmirGh72/react-native-onboarding-swiper#981b85df168654332b4b09fa311c8854db3f02a2",
   "_shasum": "fb4c5a10fc91e3d2fe7fa2e9860b3e4e997e672a",
-  "_spec": "react-native-onboarding-swiper",
+  "_spec": "AmirGh72/react-native-onboarding-swiper",
   "_where": "D:\\Projects\\pezeshket-front",
   "author": {
     "name": "Gosha Arinich, Johannes Filter"

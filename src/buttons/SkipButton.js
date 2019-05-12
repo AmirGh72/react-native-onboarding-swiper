@@ -3,11 +3,11 @@ import React from 'react';
 import TextButton from './TextButton';
 import { BUTTON_SIZE, MARGIN_LEFT, getDefaultStyle } from './util';
 
-const SkipButton = ({ skipLabel, isLight, ...rest }) => (
+const SkipButton = ({ skipLabel, isLight, skipStyle, ...rest }) => (
   <TextButton
     size={BUTTON_SIZE}
     style={{ marginLeft: MARGIN_LEFT }}
-    textStyle={[getDefaultStyle(isLight),{color: '#6b6b6b'}]}
+    textStyle={[getDefaultStyle(isLight), skipStyle]}
     {...rest}
   >
     {skipLabel}
